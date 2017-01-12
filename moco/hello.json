@@ -1,0 +1,44 @@
+[
+  {
+    "description": "visit of moco demo",
+    "request" :
+    {
+      "uri" : "/visit",
+      "headers" : {
+        "Content-Type": {
+          "match": ".*application/json.*"
+        }
+      },
+      "json" : {
+        "name": "Heaton"
+      }
+    },
+    "response" :
+    {
+      "status": 200,
+      "headers" : {
+        "content-type" : "application/json"
+      },
+      "json" : {
+        "permission": "allowed"
+      }
+    }
+  },
+  {
+    "description": "no visit of moco demo",
+    "request" :
+    {
+      "uri" : "/visit"
+    },
+    "response" :
+    {
+      "status": 200,
+      "headers" : {
+        "content-type" : "application/json"
+      },
+      "json" : {
+        "permission": "deny"
+      }
+    }
+  }
+]
